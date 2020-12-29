@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block titile %}Contact
+{% endblock titile %}
+{% block content %}
+<div class = "container-fluid px-4 py-3">
+<div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/1.jpeg" class="d-block w-100" alt="...">
+    </div>
+</div>
+<h1 class = "text-center my-2">Contact Us</h1>
+<form method ="POST" action = "/contact">
+{% csrf_token %}
+<div = "container-fluid ">
+<div class="form-group">
+  <label for="exampleFormControlInput1" class="form-label">First Name</label>
+  <input type="firstName" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+</div>
+<div class="form-group">
+  <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+  <input type="lastName" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+</div>
+<div class="form-group">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email Address">
+</div>
+<div class="form-group">
+  <label for="formFileSm" class="form-label">Upload Document</label>
+  <input class="form-control form-control-sm" id="formFileSm" type="file">
+</div>
+<div class="form-group">
+  <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+ <div class="form-group">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</div>
+</form>
+{% endblock %}
