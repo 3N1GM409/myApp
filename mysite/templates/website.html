@@ -18,13 +18,20 @@
 <script>
 var myCarousel = document.querySelector('#carouselExampleCaptions')
 var carousel = new bootstrap.Carousel(myCarousel, {
-  interval: 1000,
+  interval: 10,
   wrap: false
 })
 </script>
 
   </head>
   <body>  
+  
+  <style>
+  .copyright{
+    font-weigth:bold;
+    color:white;
+}
+  </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Donut Shop</a>
@@ -37,9 +44,6 @@ var carousel = new bootstrap.Carousel(myCarousel, {
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/service">Services</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item">
@@ -47,8 +51,7 @@ var carousel = new bootstrap.Carousel(myCarousel, {
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-success" type="search">Search</button>
       </form>
     </div>
   </div>
@@ -65,14 +68,12 @@ var carousel = new bootstrap.Carousel(myCarousel, {
     <div class="carousel-item active">
       <img src="/static/3.jpg" class="d-block w-100" alt="...">
     </div>
-
-    <div class="carousel-item ">
-      <img src="/static/12.jpg" class="d-block w-100" alt="..." width= 1349 height=350>
-      </div>
-    </div>
-    
     <div class="carousel-item">
-      <img src="/static/13.jpg" class="d-block w-100" alt="..." width= 1349 height=350>
+      <img src="/static/13.jpg" class="d-block w-100" alt="..." width=1349 height=340>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/12.jpg" class="d-block w-100" alt="..." width=1349 height=340>
+    </div>
   </div>
 
   <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
@@ -85,5 +86,32 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   </a>
 </div>
 {% block content %}{% endblock %}
+<footer>
+        <div class="footer-bg bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-6">
+                        <img src="/static/logo.png" alt="" width="72">
+                    </div>
+                    <div class="col-md-4 col-xs-6 ">
+                        <span class="copyright center-block">© 2021 The Donut Shop</span>
+                    </div>
+                    <div class="col-md-4 col-xs-12 bg-dark">
+                        <div class=" pull-right">
+                            <a class="socials" href="https://twitter.com" rel="nofollow" alt="twitter" target="_blank">
+                                <img height="24" alt="" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48/icon-twitter_gtq8dv">
+                            </a>
+                            <a class="socials" href="https://instagram.com" rel="nofollow" alt="instagram" target="_blank">
+                                <img height="24" alt="" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-instagram_b7nubh">
+                            </a>
+                            <a class="socials" href="https://www.linkedin.com/company/swiggy-in/" rel="nofollow" alt="linkedin" target="_blank">
+                                <img height="24" alt="" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-linkedin_1_xew4a8">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
   </body>
 </html>
